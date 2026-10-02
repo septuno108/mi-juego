@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Juego</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENÚ PRINCIPAL -->
+    <div id="menu" class="pantalla">
+
+        <h1>EL COMIENZO</h1>
+
+        <p>Una historia donde tus decisiones importan.</p>
+
+        <button onclick="iniciarJuego()">
+            COMENZAR
+        </button>
+
+    </div>
+
+
+    <!-- JUEGO -->
+    <div id="juego" class="pantalla oculto">
+
+        <div id="escenario">
+
+            <div id="personaje"></div>
+
+        </div>
+
+        <!-- CAJA DE DIÁLOGO -->
+
+        <div id="dialogo">
+
+            <h2 id="nombre"></h2>
+
+            <p id="texto"></p>
+
+            <button id="siguiente" onclick="siguienteDialogo()">
+                CONTINUAR
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CINEMÁTICA -->
+
+    <div id="cinematica" class="pantalla oculto">
+
+        <video id="videoHistoria" controls>
+
+            <source src="videos/intro.mp4" type="video/mp4">
+
+            Tu navegador no puede reproducir este video.
+
+        </video>
+
+    </div>
+
+
+    <!-- DECISIÓN -->
+
+    <div id="decision" class="pantalla oculto">
+
+        <h1>¿Qué quieres hacer?</h1>
+
+        <button onclick="elegir('investigar')">
+            🔎 Investigar
+        </button>
+
+        <button onclick="elegir('huir')">
+            🏃 Huir
+        </button>
+
+    </div>
+
+
+    <script src="game.js"></script>
+
+</body>
+</html>
